@@ -4,7 +4,7 @@ import scipy as sp
 import astropy.units as unit
 import astropy.constants as cons
 import matplotlib as mpl
-mpl.rcParams['font.size']=16
+mpl.rcParams['font.size']=14
 
 def f(r, x2, y2):
     x,y,xdot,ydot=r[2],r[3],x2(r[2],r[3]),y2(r[2], r[3])
@@ -101,7 +101,7 @@ def multimass_distance_plot(v0, theta, planet, minmass, maxmass):
 		ax.plot(emasses, exlist, label='Earth')
 		ax.plot(mmasses, mxlist,label='Mars')
 		ax.set_xlabel('Mass [kg]')
-		ax.set_ylabel('Scaled Maximum Distance [m]')
+		ax.set_ylabel('Normalized Maximum Distance')
 		plt.legend()
 		plt.show()
 		return f, ax
